@@ -1,0 +1,19 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Textbook-Finder</h1>
+    <h2>This message is coming from the Index.cshtml file in the Views/Home folder</h2>
+</div>
+
+<div class="box">
+    <div class="row">
+        <div class="col">
+            <a asp-action="Index" asp-controller="Textbooks">Textbooks</a>
+        </div>
+        <div class="col">
+            <a asp-action="Index" asp-controller="TextbookPublishers">TextbookPlublishers</a>
+        </div>
+    </div>
+</div>
