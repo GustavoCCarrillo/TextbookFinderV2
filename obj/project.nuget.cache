@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "IaYWtJtWlUIevGE9E5mILF0zUpfiG5v7u3obB2VWoX2fRirQe+3ozqG4dhEtUdO28hhPc64Fp8zIN98XUIlCuw==",
+  "dgSpecHash": "eVP+ihT+ZX4L0jc2vaj8s1TgKPd71Vcby/+PKY3tbeJQ45utpo0HNCqHAezstdubkhf9gDachCRxlD++yyWnQw==",
   "success": true,
-  "projectFilePath": "D:\\g2c10\\Documents\\source\\repos\\TextbookFinder\\Textbook-Finder.csproj",
+  "projectFilePath": "D:\\g2c10\\Documents\\source\\repos\\TextbookFinderV2\\Textbook-Finder.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\g2c10\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\g2c10\\.nuget\\packages\\microsoft.aspnetcore.razor\\2.2.0\\microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",
