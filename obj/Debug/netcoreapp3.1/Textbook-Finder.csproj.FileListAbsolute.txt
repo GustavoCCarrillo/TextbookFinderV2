@@ -392,3 +392,4 @@ D:\g2c10\Documents\source\repos\TextbookFinderV2\obj\Debug\netcoreapp3.1\staticw
 D:\g2c10\Documents\source\repos\TextbookFinderV2\obj\Debug\netcoreapp3.1\Textbook-Finder.dll
 D:\g2c10\Documents\source\repos\TextbookFinderV2\obj\Debug\netcoreapp3.1\Textbook-Finder.pdb
 D:\g2c10\Documents\source\repos\TextbookFinderV2\obj\Debug\netcoreapp3.1\Textbook-Finder.genruntimeconfig.cache
+D:\g2c10\Documents\source\repos\TextbookFinderV2\obj\Debug\netcoreapp3.1\Textbook-Finder.csprojAssemblyReference.cache
