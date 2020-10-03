@@ -11,16 +11,22 @@ namespace TextbookFinder.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private ITextbookRepository repository;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ITextbookRepository repo)
         {
-            _logger = logger;
+            repository = repo;
+
         }
 
-        public IActionResult Index()
-        {
-            return View();
-        }
+        public IActionResult Index() => View(repository.Textbook);
+
+
+        //private readonly ILogger<HomeController> _logger;
+        //public HomeController(ILogger<HomeController> logger)
+        //{
+        //    _logger = logger;
+
+        //}
     }
 }

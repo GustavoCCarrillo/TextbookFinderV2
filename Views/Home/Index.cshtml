@@ -1,6 +1,7 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
+@model IQueryable<Textbooks>
 
 <div class="text-center">
     <h1 class="display-4">Textbook-Finder</h1>
@@ -17,3 +18,14 @@
         </div>
     </div>
 </div>
+
+<h2> List of Textbooks </h2>
+<div class="box">
+    @foreach (var t in Model)
+    {
+        <h5>@t.Title</h5>
+        @t.Isbn
+        <h6>@t.Publisher</h6>
+    }
+</div>
+

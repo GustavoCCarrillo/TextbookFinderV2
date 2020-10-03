@@ -8826,9 +8826,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\g2c10\\Documents\\source\\repos\\TextbookFinderV2\\Textbook-Finder.csproj",
-      "projectName": "Textbook-Finder",
-      "projectPath": "D:\\g2c10\\Documents\\source\\repos\\TextbookFinderV2\\Textbook-Finder.csproj",
+      "projectUniqueName": "D:\\g2c10\\Documents\\source\\repos\\TextbookFinderV2\\TextbookFinder.csproj",
+      "projectName": "TextbookFinder",
+      "projectPath": "D:\\g2c10\\Documents\\source\\repos\\TextbookFinderV2\\TextbookFinder.csproj",
       "packagesPath": "C:\\Users\\g2c10\\.nuget\\packages\\",
       "outputPath": "D:\\g2c10\\Documents\\source\\repos\\TextbookFinderV2\\obj\\",
       "projectStyle": "PackageReference",
