@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Linq;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace TextbookFinder.Models
 {
@@ -18,6 +20,10 @@ namespace TextbookFinder.Models
         public DateTime? PublishedDate { get; set; }
         public int? PublisherId { get; set; }
         public int? CategoryId { get; set; }
+
+        [Column(TypeName = "decimal(18,4)")]
+        public decimal Price { get; set; }
+
 
         public virtual Category Category { get; set; }
         public virtual TextbookPublishers Publisher { get; set; }

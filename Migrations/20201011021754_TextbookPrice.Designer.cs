@@ -10,8 +10,8 @@ using TextbookFinder.Models;
 namespace TextbookFinder.Migrations
 {
     [DbContext(typeof(TextbooksDBContext))]
-    [Migration("20201003025515_Initial")]
-    partial class Initial
+    [Migration("20201011021754_TextbookPrice")]
+    partial class TextbookPrice
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -139,6 +139,9 @@ namespace TextbookFinder.Migrations
                     b.Property<string>("Isbn")
                         .HasColumnType("nvarchar(50)")
                         .HasMaxLength(50);
+
+                    b.Property<decimal>("Price")
+                        .HasColumnType("decimal(18,4)");
 
                     b.Property<DateTime?>("PublishedDate")
                         .HasColumnName("Published_date")

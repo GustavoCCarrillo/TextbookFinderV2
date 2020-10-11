@@ -58,7 +58,7 @@ namespace TextbookFinder.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("TextbookId,Title,Edition,Isbn,PublishedDate,PublisherId,CategoryId")] Textbooks textbooks)
+        public async Task<IActionResult> Create([Bind("TextbookId,Title,Edition,Isbn,PublishedDate,PublisherId,CategoryId,Price")] Textbooks textbooks)
         {
             if (ModelState.IsValid)
             {
@@ -94,7 +94,7 @@ namespace TextbookFinder.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("TextbookId,Title,Edition,Isbn,PublishedDate,PublisherId,CategoryId")] Textbooks textbooks)
+        public async Task<IActionResult> Edit(int id, [Bind("TextbookId,Title,Edition,Isbn,PublishedDate,PublisherId,CategoryId,Price")] Textbooks textbooks)
         {
             if (id != textbooks.TextbookId)
             {

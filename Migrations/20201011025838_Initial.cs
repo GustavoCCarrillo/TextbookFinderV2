@@ -59,7 +59,8 @@ namespace TextbookFinder.Migrations
                     Isbn = table.Column<string>(maxLength: 50, nullable: true),
                     Published_date = table.Column<DateTime>(type: "date", nullable: true),
                     Publisher_id = table.Column<int>(nullable: true),
-                    Category_id = table.Column<int>(nullable: true)
+                    Category_id = table.Column<int>(nullable: true),
+                    Price = table.Column<decimal>(type: "decimal(18,4)", nullable: false)
                 },
                 constraints: table =>
                 {

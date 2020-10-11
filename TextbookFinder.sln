@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30517.126
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TextbookFinder", "TextbookFinder.csproj", "{D062AC7E-A198-46D8-9322-020C6C4E4EDC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TextbookFinder", "TextbookFinder.csproj", "{C3842645-5A1A-4BBC-9914-36B63F552739}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{D062AC7E-A198-46D8-9322-020C6C4E4EDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D062AC7E-A198-46D8-9322-020C6C4E4EDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D062AC7E-A198-46D8-9322-020C6C4E4EDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D062AC7E-A198-46D8-9322-020C6C4E4EDC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3842645-5A1A-4BBC-9914-36B63F552739}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3842645-5A1A-4BBC-9914-36B63F552739}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3842645-5A1A-4BBC-9914-36B63F552739}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3842645-5A1A-4BBC-9914-36B63F552739}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {646F43E3-1B2A-4DD9-9592-77EC9B1C0B18}
+		SolutionGuid = {8CF2B040-7E5F-47E7-9A6C-100A42362CE9}
 	EndGlobalSection
 EndGlobal

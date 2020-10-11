@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <RootNamespace>Textbook-Finder</RootNamespace>
+    <RootNamespace>TextbookFinder</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>

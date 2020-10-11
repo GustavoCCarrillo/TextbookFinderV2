@@ -138,6 +138,9 @@ namespace TextbookFinder.Migrations
                         .HasColumnType("nvarchar(50)")
                         .HasMaxLength(50);
 
+                    b.Property<decimal>("Price")
+                        .HasColumnType("decimal(18,4)");
+
                     b.Property<DateTime?>("PublishedDate")
                         .HasColumnName("Published_date")
                         .HasColumnType("date");
