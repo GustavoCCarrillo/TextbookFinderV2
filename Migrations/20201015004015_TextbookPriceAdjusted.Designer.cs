@@ -10,8 +10,8 @@ using TextbookFinder.Models;
 namespace TextbookFinder.Migrations
 {
     [DbContext(typeof(TextbooksDBContext))]
-    [Migration("20201011021754_TextbookPrice")]
-    partial class TextbookPrice
+    [Migration("20201015004015_TextbookPriceAdjusted")]
+    partial class TextbookPriceAdjusted
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -141,7 +141,7 @@ namespace TextbookFinder.Migrations
                         .HasMaxLength(50);
 
                     b.Property<decimal>("Price")
-                        .HasColumnType("decimal(18,4)");
+                        .HasColumnType("decimal(18,2)");
 
                     b.Property<DateTime?>("PublishedDate")
                         .HasColumnName("Published_date")

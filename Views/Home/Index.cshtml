@@ -16,21 +16,19 @@
     </div>
 </div>
 
-<div class="container" >
-<h2> List of Textbooks </h2>
+
+<h3> List of Textbooks </h3>
 
  @foreach (var t in Model.Textbooks)
  { 
-    <div class="card card-outline-primary m-1 p-1">
-        <div class="bg-faded p-1">
-            <h5>@t.Title</h5>
-            @t.Isbn
-            <h6>@t.Publisher</h6>
-        </div>
-    </div>
+    <partial name="TextbookSummary" model="t" />
  }
-<div page-model="@Model.PagingInfo" page-action="Index"></div>
+
+<div page-model="@Model.PagingInfo" page-action="Index" page-classes-enabled="true"
+    page-class="btn" page-class-normal="btn-outline-dark"
+    page-class-selected="btn-secondary" page-url-category="@Model.CurrentCategory">
 </div>
+
 
 
 

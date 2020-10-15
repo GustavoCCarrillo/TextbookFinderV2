@@ -1,0 +1,14 @@
+﻿@model Textbooks
+
+
+<div class="card card-outline-primary m-1 p-1">
+    <div class="bg-faded p-1">
+        <h5>@Model.Title</h5>
+        <h4>
+            <span class="badge badge-pill badge-secondary" style="float:right">
+                <medium>@Model.Price.ToString("c")</medium>
+            </span>
+        </h4>
+    </div>
+    <div class="card-text p-1">@Model.Isbn</div>
+</div>

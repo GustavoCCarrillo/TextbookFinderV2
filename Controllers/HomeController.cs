@@ -23,25 +23,20 @@ namespace TextbookFinder.Controllers
 
         // public IActionResult Index() => View(repository.Textbook);
 
-        public ViewResult Index(int textbookPage = 1)
+        public ViewResult Index(string category, int textbookPage = 1)
             => View(new TextbooksListViewModel
             { Textbooks = repository.Textbook
+                //.AsEnumerable()
+                .Where(t => category == null || t.Category.Categories == category)
                 .OrderBy(t => t.TextbookId)
                 .Skip((textbookPage - 1) * PageSize)
                 .Take(PageSize),
-              PagingInfo = new PagingInfo
-              {
-                CurrentPage = textbookPage,
-                ItemsPerPage = PageSize,
-                TotalItems = repository.Textbook.Count()
-              }
+                PagingInfo = new PagingInfo
+                {
+                    CurrentPage = textbookPage,
+                    ItemsPerPage = PageSize,
+                    TotalItems = repository.Textbook.Count()
+                }
             });
-
-        //private readonly ILogger<HomeController> _logger;
-        //public HomeController(ILogger<HomeController> logger)
-        //{
-        //    _logger = logger;
-
-        //}
     }
 }

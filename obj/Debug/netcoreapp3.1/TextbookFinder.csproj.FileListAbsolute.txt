@@ -195,5 +195,6 @@ D:\g2c10\Documents\source\repos\TextbookFinderV2\obj\Debug\netcoreapp3.1\staticw
 D:\g2c10\Documents\source\repos\TextbookFinderV2\obj\Debug\netcoreapp3.1\TextbookFinder.dll
 D:\g2c10\Documents\source\repos\TextbookFinderV2\obj\Debug\netcoreapp3.1\TextbookFinder.pdb
 D:\g2c10\Documents\source\repos\TextbookFinderV2\obj\Debug\netcoreapp3.1\TextbookFinder.genruntimeconfig.cache
-D:\g2c10\Documents\source\repos\TextbookFinderV2\obj\Debug\netcoreapp3.1\TextbookFinder.csprojAssemblyReference.cache
 D:\g2c10\Documents\source\repos\TextbookFinderV2\bin\Debug\netcoreapp3.1\libman.json
+D:\g2c10\Documents\source\repos\TextbookFinderV2\obj\Debug\netcoreapp3.1\Razor\Views\Shared\TextbookSummary.cshtml.g.cs
+D:\g2c10\Documents\source\repos\TextbookFinderV2\obj\Debug\netcoreapp3.1\TextbookFinder.csprojAssemblyReference.cache
