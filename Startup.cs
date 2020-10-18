@@ -28,6 +28,11 @@ namespace TextbookFinder
             services.AddControllersWithViews();
             services.AddDbContext<TextbooksDBContext>(options => options.UseSqlServer(Configuration.GetConnectionString("TextbooksDBConnection")));
             services.AddScoped<ITextbookRepository, EFTextbookRepository>();
+            services.AddRazorPages();
+            services.AddSession();
+            services.AddDistributedMemoryCache();
+            services.AddScoped<Cart>(sp => SessionCart.GetCart(sp));
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -46,6 +51,7 @@ namespace TextbookFinder
             app.UseDeveloperExceptionPage();
             app.UseHttpsRedirection();
             app.UseStaticFiles();
+            app.UseSession();
             app.UseStatusCodePages();
             app.UseRouting();
 
@@ -53,10 +59,10 @@ namespace TextbookFinder
 
             app.UseEndpoints(endpoints =>
             {
-            endpoints.MapControllerRoute("catpage", "{category}/Page{productPage:int}",
+            endpoints.MapControllerRoute("catpage", "{category}/Page{textbookPage:int}",
                 new { Controller = "Home", action = "Index" });
 
-                endpoints.MapControllerRoute("page", "Page{productPage:int}",
+                endpoints.MapControllerRoute("page", "Page{textbookPage:int}",
                     new { Controller = "Home", action = "Index", textbookPage = 1 });
 
                 endpoints.MapControllerRoute("category", "{category}",
@@ -66,6 +72,7 @@ namespace TextbookFinder
                     "Textbooks/Page{textbookPage}",
                     new { Controller = "Home", action = "Index", textbookPage = 1 });
                 endpoints.MapDefaultControllerRoute();
+                endpoints.MapRazorPages();
             });
         }
     }

@@ -26,8 +26,15 @@ using TextbookFinder.Models.ViewModels;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 3 "D:\g2c10\Documents\source\repos\TextbookFinderV2\Views\_ViewImports.cshtml"
+using TextbookFinder.Infrastructure;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"7091c65830b0329e613be026ede8a57552863778", @"/Views/_ViewStart.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"290f2a538b21bc4e63405aef715bb60147711b4d", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"dfd9a474a7594a99e060dfef7f5f5f50c0303c06", @"/Views/_ViewImports.cshtml")]
     public class Views__ViewStart : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #pragma warning disable 1998

@@ -12,6 +12,6 @@ namespace TextbookFinder.Models.ViewModels
         public IEnumerable<TextbookPublishers> TextbookPublishers { get; set; }
         public IEnumerable<Category> Categories { get; set; }
         public PagingInfo PagingInfo { get; set; }
-        public Category CurrentCategory { get; set; }
+        public string CurrentCategory { get; set; }
     }  
 }

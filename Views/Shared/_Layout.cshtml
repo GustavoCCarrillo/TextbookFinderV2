@@ -2,15 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Textbook-Finder</title>
-    <link href="~/lib/bootstrap/dist/css/bootstrap.min.css"  rel="stylesheet"/>
+    <meta name="viewport" content="width=device-width" />
+    <title>TextbookFinder</title>
+    <link href="/lib/twitter-bootstrap/css/bootstrap.min.css"  rel="stylesheet"/>
+    <link href="/lib/font-awesome/css/all.min.css" rel="stylesheet" />
 </head>
 <body>
-    <div class="bg-dark text-white p-3">
-        <span class="navbar-brand ml-2"> TextbookFinder</span>
+    <div class="bg-secondary text-white p-2">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col navbar-brand">TextbookFinder</div>
+                <div class="col-6 text-right">
+                    <vc:cart-summary />
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="row m-2 p-2">
+
+    <div class="row m-1 p-1">
         <div id="categories" class="col-3">
             <vc:navigation-menu />
             This is where the categories will be
@@ -22,12 +31,8 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2020 - Textbook_Finder 
+            &copy; 2020 - TextbookFinder 
         </div>
     </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-    @RenderSection("Scripts", required: false)
 </body>
 </html>

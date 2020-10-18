@@ -26,8 +26,15 @@ using TextbookFinder.Models.ViewModels;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 3 "D:\g2c10\Documents\source\repos\TextbookFinderV2\Views\_ViewImports.cshtml"
+using TextbookFinder.Infrastructure;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"b828201bdfab2caca1acb67021a089aab7668513", @"/Views/TextbookCategories/Details.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"290f2a538b21bc4e63405aef715bb60147711b4d", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"dfd9a474a7594a99e060dfef7f5f5f50c0303c06", @"/Views/_ViewImports.cshtml")]
     public class Views_TextbookCategories_Details : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<TextbookFinder.Models.TextbookCategories>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-action", "Index", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -105,7 +112,7 @@ Write(Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }));
 #line hidden
 #nullable disable
             WriteLiteral(" |\r\n    ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b828201bdfab2caca1acb67021a089aab76685135501", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b828201bdfab2caca1acb67021a089aab76685135694", async() => {
                 WriteLiteral("Back to List");
             }
             );

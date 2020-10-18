@@ -26,8 +26,15 @@ using TextbookFinder.Models.ViewModels;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 3 "D:\g2c10\Documents\source\repos\TextbookFinderV2\Views\_ViewImports.cshtml"
+using TextbookFinder.Infrastructure;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"adaf4d899fe25192936fe0d991550bacc49cb877", @"/Views/TextbookCategories/Index.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"290f2a538b21bc4e63405aef715bb60147711b4d", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"dfd9a474a7594a99e060dfef7f5f5f50c0303c06", @"/Views/_ViewImports.cshtml")]
     public class Views_TextbookCategories_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<IEnumerable<TextbookFinder.Models.TextbookCategories>>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-action", "Create", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -67,7 +74,7 @@ using TextbookFinder.Models.ViewModels;
 #line hidden
 #nullable disable
             WriteLiteral("\r\n<h1>Index</h1>\r\n\r\n<p>\r\n    ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "adaf4d899fe25192936fe0d991550bacc49cb8774365", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "adaf4d899fe25192936fe0d991550bacc49cb8774558", async() => {
                 WriteLiteral("Create New");
             }
             );
@@ -155,7 +162,7 @@ using TextbookFinder.Models.ViewModels;
 #line hidden
 #nullable disable
             WriteLiteral("    </tbody>\r\n</table>\r\n");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "adaf4d899fe25192936fe0d991550bacc49cb8778442", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "adaf4d899fe25192936fe0d991550bacc49cb8778635", async() => {
                 WriteLiteral("Back to Main page.");
             }
             );

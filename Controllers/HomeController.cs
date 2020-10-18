@@ -35,8 +35,12 @@ namespace TextbookFinder.Controllers
                 {
                     CurrentPage = textbookPage,
                     ItemsPerPage = PageSize,
-                    TotalItems = repository.Textbook.Count()
-                }
+                    //TotalItems = repository.Textbook.Count()
+                    TotalItems = category == null ?
+                    repository.Textbook.Count() :
+                    repository.Textbook.Where(e => e.Category.Categories == category).Count()
+                },
+                CurrentCategory = category
             });
     }
 }

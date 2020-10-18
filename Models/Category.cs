@@ -16,5 +16,6 @@ namespace TextbookFinder.Models
 
         public virtual ICollection<TextbookCategories> TextbookCategories { get; set; }
         public virtual ICollection<Textbooks> Textbooks { get; set; }
+
     }
 }
