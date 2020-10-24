@@ -10,8 +10,8 @@ using TextbookFinder.Models;
 namespace TextbookFinder.Migrations
 {
     [DbContext(typeof(TextbooksDBContext))]
-    [Migration("20201015004015_TextbookPriceAdjusted")]
-    partial class TextbookPriceAdjusted
+    [Migration("20201024032236_Initial")]
+    partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -45,6 +45,31 @@ namespace TextbookFinder.Migrations
                     b.ToTable("Authors");
                 });
 
+            modelBuilder.Entity("TextbookFinder.Models.CartLine", b =>
+                {
+                    b.Property<int>("CartLineID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int?>("OrderId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Quantity")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("TextbookId")
+                        .HasColumnType("int");
+
+                    b.HasKey("CartLineID");
+
+                    b.HasIndex("OrderId");
+
+                    b.HasIndex("TextbookId");
+
+                    b.ToTable("CartLine");
+                });
+
             modelBuilder.Entity("TextbookFinder.Models.Category", b =>
                 {
                     b.Property<int>("CategoryId")
@@ -61,6 +86,47 @@ namespace TextbookFinder.Migrations
                     b.HasKey("CategoryId");
 
                     b.ToTable("Category");
+                });
+
+            modelBuilder.Entity("TextbookFinder.Models.Order", b =>
+                {
+                    b.Property<int>("OrderId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Address")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Address1")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("City")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Country")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("GiftWrap")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("State")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Zip")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("OrderId");
+
+                    b.ToTable("Orders");
                 });
 
             modelBuilder.Entity("TextbookFinder.Models.TextbookAuthors", b =>
@@ -163,6 +229,17 @@ namespace TextbookFinder.Migrations
                     b.HasIndex("PublisherId");
 
                     b.ToTable("Textbooks");
+                });
+
+            modelBuilder.Entity("TextbookFinder.Models.CartLine", b =>
+                {
+                    b.HasOne("TextbookFinder.Models.Order", null)
+                        .WithMany("Lines")
+                        .HasForeignKey("OrderId");
+
+                    b.HasOne("TextbookFinder.Models.Textbooks", "Textbook")
+                        .WithMany()
+                        .HasForeignKey("TextbookId");
                 });
 
             modelBuilder.Entity("TextbookFinder.Models.TextbookAuthors", b =>

@@ -35,6 +35,26 @@ namespace TextbookFinder.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Orders",
+                columns: table => new
+                {
+                    OrderId = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(nullable: false),
+                    Address = table.Column<string>(nullable: false),
+                    Address1 = table.Column<string>(nullable: true),
+                    City = table.Column<string>(nullable: false),
+                    State = table.Column<string>(nullable: false),
+                    Zip = table.Column<string>(nullable: true),
+                    Country = table.Column<string>(nullable: false),
+                    GiftWrap = table.Column<bool>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Orders", x => x.OrderId);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Textbook_Publishers",
                 columns: table => new
                 {
@@ -60,7 +80,7 @@ namespace TextbookFinder.Migrations
                     Published_date = table.Column<DateTime>(type: "date", nullable: true),
                     Publisher_id = table.Column<int>(nullable: true),
                     Category_id = table.Column<int>(nullable: true),
-                    Price = table.Column<decimal>(type: "decimal(18,4)", nullable: false)
+                    Price = table.Column<decimal>(type: "decimal(18,2)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -76,6 +96,33 @@ namespace TextbookFinder.Migrations
                         column: x => x.Publisher_id,
                         principalTable: "Textbook_Publishers",
                         principalColumn: "Publisher_id",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "CartLine",
+                columns: table => new
+                {
+                    CartLineID = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    TextbookId = table.Column<int>(nullable: true),
+                    Quantity = table.Column<int>(nullable: false),
+                    OrderId = table.Column<int>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_CartLine", x => x.CartLineID);
+                    table.ForeignKey(
+                        name: "FK_CartLine_Orders_OrderId",
+                        column: x => x.OrderId,
+                        principalTable: "Orders",
+                        principalColumn: "OrderId",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_CartLine_Textbooks_TextbookId",
+                        column: x => x.TextbookId,
+                        principalTable: "Textbooks",
+                        principalColumn: "Textbook_id",
                         onDelete: ReferentialAction.Restrict);
                 });
 
@@ -128,6 +175,16 @@ namespace TextbookFinder.Migrations
                 });
 
             migrationBuilder.CreateIndex(
+                name: "IX_CartLine_OrderId",
+                table: "CartLine",
+                column: "OrderId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_CartLine_TextbookId",
+                table: "CartLine",
+                column: "TextbookId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Textbook_Authors_Author_id",
                 table: "Textbook_Authors",
                 column: "Author_id");
@@ -151,10 +208,16 @@ namespace TextbookFinder.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
+                name: "CartLine");
+
+            migrationBuilder.DropTable(
                 name: "Textbook_Authors");
 
             migrationBuilder.DropTable(
                 name: "Textbook_Categories");
+
+            migrationBuilder.DropTable(
+                name: "Orders");
 
             migrationBuilder.DropTable(
                 name: "Authors");
