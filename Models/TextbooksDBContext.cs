@@ -21,6 +21,8 @@ namespace TextbookFinder.Models
         public virtual DbSet<TextbookCategories> TextbookCategories { get; set; }
         public virtual DbSet<TextbookPublishers> TextbookPublishers { get; set; }
         public virtual DbSet<Textbooks> Textbooks { get; set; }
+        public virtual DbSet<Order> Orders { get; set; }
+
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

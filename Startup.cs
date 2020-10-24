@@ -28,6 +28,7 @@ namespace TextbookFinder
             services.AddControllersWithViews();
             services.AddDbContext<TextbooksDBContext>(options => options.UseSqlServer(Configuration.GetConnectionString("TextbooksDBConnection")));
             services.AddScoped<ITextbookRepository, EFTextbookRepository>();
+            services.AddScoped<IOrderRepository, EFOrderRepository>();
             services.AddRazorPages();
             services.AddSession();
             services.AddDistributedMemoryCache();
