@@ -9,5 +9,9 @@ namespace TextbookFinder.Models
     {
         IQueryable<Textbooks> Textbook { get; }
         IQueryable<TextbookPublishers> TextbookPublishers { get; }
+
+        void SaveTextbook(Textbooks t);
+        void CreateTextbook(Textbooks t);
+        void DeleteTextbook(Textbooks t);
     }
 }

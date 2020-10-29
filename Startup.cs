@@ -10,8 +10,9 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Hosting;
 using TextbookFinder.Models;
+using Microsoft.AspNetCore.Identity;
 
-namespace TextbookFinder
+namespace TextbookFinder.Models
 {
     public class Startup
     {
@@ -26,7 +27,9 @@ namespace TextbookFinder
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+
             services.AddDbContext<TextbooksDBContext>(options => options.UseSqlServer(Configuration.GetConnectionString("TextbooksDBConnection")));
+
             services.AddScoped<ITextbookRepository, EFTextbookRepository>();
             services.AddScoped<IOrderRepository, EFOrderRepository>();
             services.AddRazorPages();
@@ -35,6 +38,10 @@ namespace TextbookFinder
             services.AddScoped<Cart>(sp => SessionCart.GetCart(sp));
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddServerSideBlazor();
+
+            services.AddDbContext<AppIdentityDbContext>(options => options.UseSqlServer(Configuration["ConnectionStrings:IdentityConnection"]));
+
+            services.AddIdentity<IdentityUser, IdentityRole>().AddEntityFrameworkStores<AppIdentityDbContext>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -56,13 +63,13 @@ namespace TextbookFinder
             app.UseSession();
             app.UseStatusCodePages();
             app.UseRouting();
-
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
             endpoints.MapControllerRoute("catpage", "{category}/Page{textbookPage:int}",
-                new { Controller = "Home", action = "Index" });
+                    new { Controller = "Home", action = "Index" });
 
                 endpoints.MapControllerRoute("page", "Page{textbookPage:int}",
                     new { Controller = "Home", action = "Index", textbookPage = 1 });
@@ -78,6 +85,7 @@ namespace TextbookFinder
                 endpoints.MapBlazorHub();
                 endpoints.MapFallbackToPage("/admin/{*catchall}", "/Admin/Index");
             });
+            IdentitySeedData.EnsurePopulated(app);
         }
     }
 }

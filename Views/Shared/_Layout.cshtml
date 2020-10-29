@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <title>TextbookFinder</title>
+    <title>@ViewData["Title"] - TextbookFinder</title>
     <link href="/lib/twitter-bootstrap/css/bootstrap.min.css"  rel="stylesheet"/>
     <link href="/lib/font-awesome/css/all.min.css" rel="stylesheet" />
 </head>
@@ -20,10 +20,10 @@
     </div>
 
     <div class="row m-1 p-1">
-        <div id="categories" class="col-3">
+        @*<div id="categories" class="col-3">
             <vc:navigation-menu />
             This is where the categories will be
-        </div>
+        </div>*@
         <div class="col-9">
             @RenderBody()
         </div>
@@ -31,8 +31,12 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2020 - TextbookFinder 
+            &copy; 2020 - TextbookFinder
         </div>
     </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
 </body>
 </html>

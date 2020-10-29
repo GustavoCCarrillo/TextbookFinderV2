@@ -1,18 +1,27 @@
 ﻿@inherits LayoutComponentBase
 
 <div class="bg-info text-white p-2">
-    <span class="navbar-brand ml-2">TextbookFinder Administration Page</span>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <span class="navbar-brand ml-2">TextbookFinder Administration Page</span>
+            </div>
+            <div class="col-2 text-left">
+                <a class="btn btn-sm btn-primary" href="/account/logout">Log Out</a>
+            </div>
+        </div>
+    </div>
 </div>
 <div class="container-fluid">
     <div class="row p-2">
         <div class="col-3">
-            <NavLink class="btn btn-outline-primary btn-block"
-                     href="/admin/textbooks"
+            <NavLink class="btn btn-outline-secondary btn-block"
+                     href="/admin/textbook"
                      ActiveClass="btn-seconday text-white"
                      Match="NavLinkMatch.Prefix">
                 Textbooks
             </NavLink>
-            <NavLink class="btn btn-outline-primary btn-block"
+            <NavLink class="btn btn-outline-secondary btn-block"
                      href="/admin/orders"
                      ActiveClass="btn-secondary text-white"
                      Match="NavLinkMatch.Prefix">

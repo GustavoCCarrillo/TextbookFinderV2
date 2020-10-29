@@ -14,5 +14,22 @@ namespace TextbookFinder.Models
         }
         public IQueryable<Textbooks> Textbook => context.Textbooks;
         public IQueryable<TextbookPublishers> TextbookPublishers => context.TextbookPublishers;
+
+        public void CreateTextbook(Textbooks t)
+        {
+            context.Add(t);
+            context.SaveChanges();
+        }
+
+        public void DeleteTextbook(Textbooks t)
+        {
+            context.Remove(t);
+            context.SaveChanges();
+        }
+
+        public void SaveTextbook(Textbooks t)
+        {
+            context.SaveChanges();
+        }
     }
 }

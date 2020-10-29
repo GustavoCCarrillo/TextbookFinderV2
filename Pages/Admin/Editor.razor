@@ -1,0 +1,81 @@
+﻿@page "/admin/textbooks/edit/{id:int}" 
+@page "/admin/textbooks/create"
+@inherits OwningComponentBase<ITextbookRepository>
+
+<style>
+    div.validation-message {
+        color: rgb(220, 53, 69);
+        font-weight: 500
+    }
+</style>
+
+<h3 class="bg-@ThemeColor text-white text-center p-1">@TitleText a Textbook</h3>
+<EditForm Model="Textbook" OnValidSubmit="SaveTextbook">
+    <DataAnnotationsValidator />
+    @if (Textbook.TextbookId != 0)
+    {
+        <div class="form-group">
+            <label>ID</label>
+            <input class="form-control" disabled value="@Textbook.TextbookId" />
+        </div>
+    }
+    <div class="form-group">
+        <label>Title</label>
+        <ValidationMessage For="@(() => Textbook.Title)" />
+        <InputText class="form-control" @bind-Value="Textbook.Title" />
+    </div>
+    <div class="form-group">
+        <label>ISBN</label>
+        <ValidationMessage For="@(() => Textbook.Isbn)" />
+        <InputText class="form-control" @bind-Value="Textbook.Isbn" />
+    </div>
+    @*<div class="form-group">
+        <label>Category</label>
+        <ValidationMessage For="@(() => Textbook.Category)" />
+        <InputText class="form-control" @bind-Value="Textbook.Category.ToString()" />
+    </div>*@
+    <div class="form-group">
+        <label>Price</label>
+        <ValidationMessage For="@(() => Textbook.Price)" />
+        <InputNumber class="form-control" @bind-Value="Textbook.Price" />
+    </div>
+    <button type="submit" class="btn btn-@ThemeColor">Save</button>
+    <NavLink class="btn btn-secondary" href="/admin/textbook">Cancel</NavLink>
+</EditForm>
+
+@code {
+
+    public ITextbookRepository Repository => Service;
+
+    [Inject]
+    public NavigationManager NavManager { get; set; }
+
+    [Parameter]
+    public int Id { get; set; } = 0;
+
+    public Textbooks Textbook { get; set; } = new Textbooks();
+
+    protected override void OnParametersSet()
+    {
+        if (Id != 0)
+        {
+            Textbook = Repository.Textbook.FirstOrDefault(p => p.TextbookId == Id);
+        }
+    }
+
+    public void SaveTextbook()
+    {
+        if (Id == 0)
+        {
+            Repository.CreateTextbook(Textbook);
+        }
+        else
+        {
+            Repository.SaveTextbook(Textbook);
+        }
+        NavManager.NavigateTo("/admin/textbook");
+    }
+
+    public string ThemeColor => Id == 0 ? "primary" : "warning";
+    public string TitleText => Id == 0 ? "Create" : "Edit";
+}

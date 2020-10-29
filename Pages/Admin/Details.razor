@@ -1,0 +1,33 @@
+﻿@page "/admin/textbook/details/{id:int}"
+
+<h3 class="bg-info text-white text-center p-1">Details</h3>
+
+<table class="table table-sm table-bordered table-striped">
+    <tbody>
+        <tr><th>Title</th><td>@Textbook.Title</td></tr>
+        <tr><th>ISBBN</th><td>@Textbook.Isbn</td></tr>
+        <tr><th>Category</th><td>@Textbook.Category</td></tr>
+        <tr><th>Price</th><td>@Textbook.Price.ToString("C")</td></tr>
+    </tbody>
+</table>
+
+<NavLink class="btn btn-warning" href="@EditUrl">Edit</NavLink>
+<NavLink class="btn btn-secondary" href="/admin/products">Back</NavLink>
+
+@code {
+
+    [Inject]
+    public ITextbookRepository Repository { get; set; }
+
+    [Parameter]
+    public int Id { get; set; }
+
+    public Textbooks Textbook { get; set; }
+
+    protected override void OnParametersSet()
+    {
+        Textbook = Repository.Textbook.FirstOrDefault(t => t.TextbookId == Id);
+    }
+
+    public string EditUrl => $"/admin/products/edit/{Textbook}";
+}

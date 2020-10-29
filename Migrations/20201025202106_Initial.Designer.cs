@@ -10,7 +10,7 @@ using TextbookFinder.Models;
 namespace TextbookFinder.Migrations
 {
     [DbContext(typeof(TextbooksDBContext))]
-    [Migration("20201024032236_Initial")]
+    [Migration("20201025202106_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -116,6 +116,9 @@ namespace TextbookFinder.Migrations
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("Shipped")
+                        .HasColumnType("bit");
 
                     b.Property<string>("State")
                         .IsRequired()
