@@ -98,20 +98,20 @@
 ## Requirements <h2>
 [table of content](#tcontent)
 
-| ID |  Requirement List - System shall..                                             |Test Method|Test ID|
-|----|--------------------------------------------------------------------------------|-----------|-------|
-|1.0 |	Prompt the user to search for textbooks                                       |Inspection |T1     |
-|1.1 |	Allow user to enter a query into a search mechanism                           |Test       |T2     |
-|1.2 |	Allow user to select filters against the query to limit the number of results |Demo       |T3     |
-|1.3 |	Filter by category, subject or Title                                          |Test       |T4     |
-|2.0 |	Display a list of results in a scroll-down or scroll-up fashion               |Inspection |T5     |
-|2.1 |	Allow user to select a book to see description and retailer link              |Demo       |T6     |
-|2.2 |	Description tab opens a separate popup window with product description        |Demo       |T7     |
-|2.3 |	Allow user to select description and retailer hyperlinks                      |Test       |T8     |
-|2.4 |	Redirect user to retailers’ site                                              |Demo       |T9     |
-|3.0 |	Display a map with the location of nearby retailers                           |Inspection |T10    |
-|3.1 |	Let the user select a retailer from the map                                   |Demo       |T11    |
-|3.2 |	Display retailer geographical location, phone, and hours of operation         |Inspection |T12    |
+| ID |  Requirement List - System shall..                                            |Test Method|Test ID|
+|----|-------------------------------------------------------------------------------|-----------|-------|
+|1.0 |	Allow user to view pages of textbooks available                               |Inspection |T1     |
+|1.1 |	Allow user to traverse through inventory pages                                |Unit Test  |T2     |
+|1.2 |	Allow user to select individual textbook items                                |Demo       |T3     |
+|1.3 |	Show color difference when catgory is selected                                |inspection |T4     |
+|2.0 |	Display a relevant list of results when a category is selected                |Inspection |T5     |
+|2.1 |	Display a maximum of 5 results per page                                       |Demo       |T6     |
+|2.2 |	Allow user to add textbook items to the Cart                                  |Unit Test  |T7     |
+|2.3 |	Allow user to see quantity of items in Cart and the current total             |Test       |T8     |
+|2.4 |	Allow user to remove items from Cart                                          |Demo       |T9     |
+|3.0 |	Do not allow user to checkout with empty Cart                                 |Inspection |T10    |
+|3.1 |	Let user submit valid shipping details and go through checkout                |Demo       |T11    |
+|3.2 |	Display that order was successfully summit it along with order number         |Inspection |T12    |
 
 
 ***
