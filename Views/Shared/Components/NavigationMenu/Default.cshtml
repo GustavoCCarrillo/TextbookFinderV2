@@ -1,18 +1,17 @@
 ﻿@model IEnumerable<Category>
 
-<a class="btn btn-outline-primary btn-outline-dark" asp-action="Index"
-   asp-controller="Home" asp-route-category="">
-    Home Page
-</a>
-
-@foreach (var category in Model)
-{
-    <a class="btn btn-block 
-       @(category.Categories == ViewBag.SelectedCategory
-    ? "btn-primary": "btn-outline-secondary")"
-       asp-action="Index" asp-controller="Home"
-       asp-route-category="@category.Categories.ToString()"
-       asp-route-textbookPage="1">
-        @category.Categories.ToString()
-    </a>
-}
+<body>
+   <div class="container p-3 my-3 bg-dark text-black">
+            @foreach (var category in Model)
+            {
+                <a class="btn btn-lg text-light
+                   @(category.Categories == ViewBag.SelectedCategory
+                       ? "btn-info": "btn-outline-secondary")"
+                   asp-action="Index" asp-controller="Home"
+                   asp-route-category="@category.Categories.ToString()"
+                   asp-route-textbookPage="1">
+                    @category.Categories.ToString()
+                </a>
+            }
+   </div>
+</body>

@@ -10,8 +10,8 @@ namespace TextbookFinder.Models
 
     public static class IdentitySeedData
     {
-        private const string adminUser = "Admin";
-        private const string adminPassword = "Secret123$";
+        private const string adminUser = "Gus";
+        private const string adminPassword = "G0ldf1sh!";
 
         public static async void EnsurePopulated(IApplicationBuilder app)
         {
@@ -31,9 +31,9 @@ namespace TextbookFinder.Models
             IdentityUser user = await userManager.FindByIdAsync(adminUser);
             if (user == null)
             {
-                user = new IdentityUser("Admin");
-                user.Email = "admin@example.com";
-                user.PhoneNumber = "555-1234";
+                user = new IdentityUser("Gus");
+                user.Email = "gus@example.com";
+                user.PhoneNumber = "555-6789";
                 await userManager.CreateAsync(user, adminPassword);
             }
         }

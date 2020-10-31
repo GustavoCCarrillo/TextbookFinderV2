@@ -1,34 +1,41 @@
 ﻿@model TextbooksListViewModel
 
-<div class="text-center">
-    <h1 class="display-4">TextbookFinder</h1>
 
-</div>
+  <head>
+      @*<title>TextbookFinder</title>*@
+      @*<div class="container">
+              <div class="row">
+                  <div class="col">
+                      <a asp-action="Index" asp-controller="Textbooks">Textbooks</a>
+                  </div>
+                  <div class="col">
+                      <a asp-action="Index" asp-controller="TextbookPublishers">TextbookPlublishers</a>
+                  </div>
+              </div>
+          </div>*@
+  
+      <link href="~/startbootstrap-modern-business/" rel="stylesheet"/>
+  
+  </head>
+  
+  <body>
 
-<div class="container">
-    <div class="row">
-        <div class="col">
-            <a asp-action="Index" asp-controller="Textbooks">Textbooks</a>
-        </div>
-        <div class="col">
-            <a asp-action="Index" asp-controller="TextbookPublishers">TextbookPlublishers</a>
-        </div>
-    </div>
-</div>
+      
+      <div class="container p-5 my-3 bg-dark text-black">
+          <h3><span class="subheading Text-center text-white">Our collection is small but growing!</span></h3>
+          <div class="list-group-flush Text-center">
+              <vc:navigation-menu />
+          </div>
+          @foreach (var t in Model.Textbooks)
+          {
+              <partial name="TextbookSummary" model="t" />
+          }
 
-
-<h3> List of Textbooks </h3>
-
- @foreach (var t in Model.Textbooks)
- { 
-    <partial name="TextbookSummary" model="t" />
- }
-
-<div page-model="@Model.PagingInfo" page-action="Index" page-classes-enabled="true"
-    page-class="btn" page-class-normal="btn-outline-dark"
-    page-class-selected="btn-secondary" page-url-category="@Model.CurrentCategory">
-</div>
-
-
+          <div page-model="@Model.PagingInfo" page-action="Index" page-classes-enabled="true"
+               page-class="btn" page-class-normal="btn-outline-secondary"
+               page-class-selected="btn-info" page-url-category="@Model.CurrentCategory">
+          </div>
+      </div>
+  </body>
 
 

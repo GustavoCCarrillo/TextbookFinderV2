@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -25,6 +26,16 @@ namespace TextbookFinder.Models
             if (order.OrderId == 0)
             {
                 context.Orders.Add(order);
+            }
+            context.SaveChanges();
+        }
+
+        public void DeleteOrder(Order order)
+        {
+            context.AttachRange(order.Lines.Select(l => l.Textbook));
+            if (order.OrderId != 0)
+            {
+                context.Orders.Remove(order);
             }
             context.SaveChanges();
         }

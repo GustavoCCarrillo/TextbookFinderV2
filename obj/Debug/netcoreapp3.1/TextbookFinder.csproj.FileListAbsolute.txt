@@ -227,3 +227,5 @@ D:\g2c10\Documents\source\repos\TextbookFinderV2\obj\Debug\netcoreapp3.1\Textboo
 D:\g2c10\Documents\source\repos\TextbookFinderV2\obj\Debug\netcoreapp3.1\TextbookFinder.pdb
 D:\g2c10\Documents\source\repos\TextbookFinderV2\obj\Debug\netcoreapp3.1\TextbookFinder.genruntimeconfig.cache
 D:\g2c10\Documents\source\repos\TextbookFinderV2\obj\Debug\netcoreapp3.1\Razor\Views\Account\Login.cshtml.g.cs
+D:\g2c10\Documents\source\repos\TextbookFinderV2\obj\Debug\netcoreapp3.1\Razor\Views\Contact\ContactUs.cshtml.g.cs
+D:\g2c10\Documents\source\repos\TextbookFinderV2\obj\Debug\netcoreapp3.1\TextbookFinder.csprojAssemblyReference.cache

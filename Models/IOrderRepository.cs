@@ -7,5 +7,6 @@ namespace TextbookFinder.Models
     {
         IQueryable<Order> Orders { get; }
         void SaveOrder(Order order);
+        void DeleteOrder(Order order);
     }
 }
