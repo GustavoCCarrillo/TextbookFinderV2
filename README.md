@@ -138,11 +138,11 @@
 
 ***
 
-| ?  |  Test Readiness Review                                                        |     %         |Test IDs                    |
-|----|-------------------------------------------------------------------------------|---------------|----------------------------|
-| 1  |	What percent of requirements are (currently) covered by test cases?           |   80%         |T1 - T11                    |
-| 2  |	What percent of test cases are currently passing?                             |   84.6%       |T1-T8, T10, T11             |
-| 3  |	What level of Validation could be expected after Verification?                |System Testing |evaluate system’s compliance|
+| ?  |  Test Readiness Review                                                        |     %         |Test IDs                            |
+|----|-------------------------------------------------------------------------------|---------------|------------------------------------|
+| 1  |	What percent of requirements are (currently) covered by test cases?           |   80%         |T1 - T11                            |
+| 2  |	What percent of test cases are currently passing?                             |   84.6%       |T1-T8, T10, T11                     |
+| 3  |	What level of Validation could be expected after Verification?                |System Testing |Need to evaluate system’s compliance|
 
 
 
