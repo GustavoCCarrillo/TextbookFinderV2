@@ -112,26 +112,27 @@
 |3.0 |	Do not allow user to checkout with empty Cart                                 |Inspection |T10    |
 |3.1 |	Let user submit valid shipping details and go through checkout                |Demo       |T11    |
 |3.2 |	Display that order was successfully summit it along with order number         |Inspection |T12    |
+|3.3 | Display an introduction page at the start of the application                  |Inspection |T13    |
 
 
 ***
 
 
-| ID |  Test Table                                                                   |Implemented?|Initial  | Status  |Test Method|
-|----|-------------------------------------------------------------------------------|------------|---------|---------|-----------|
-|T1  |	Verify controller can use textbook repository file                            |     Yes    | Tested  | passed  |Inspection |
-|T2  |	Inspect list of textbooks displayed                                           |     Yes    | Tested  | passed  | Unit Test |
-|T3  |	Check that each product page is displayed                                     |     Yes    | Tested  | passed  | Unit Test |
-|T4  |	Verify category boxes are selectable                                          |     Yes    | Tested  | passed  |Inspection |
-|T5  |	Verify list of textbooks are filterd by the category selected                 |     Yes    | Tested  | passed  |Inspection |
-|T6  |	Check the filtered result shows the precribed number of results (5)           |     Yes    | Tested  | passed  |Inspection |
-|T7  |	Check that the Cart can add/load new items (textbooks)                        |     Yes    | Tested  | passed  | Unit Test |
-|T8  |	Verify the Cart sums the quantity of items in it                              |     Yes    | Tested  | passed  |Inspection |
-|T9  |	Verify items can be removed from Cart and Cart can be cleared                 |     Yes    | Tested  | failing |Inspection |
-|T10 |	Verify that system does not allow Checkout with empty Cart                    |     Yes    | Tested  | passed  |   Demo    |
-|T11 |	Check valid shipping details for checkout and verify it Checks out an order   |     Yes    | Tested  | passed  | Tes/Demo  |
-|T12 |	Check the order is saved to the database in the Orders table                  |     Yes    | Tested  | passed  |Inspection |
-|T13 | Verify the intro page is displayed first                                      |     Yes    | Tested  | failing |   Demo    |
+| ID |  Test Table                                                                   |Implemented?| Initial |      Status       | Test Method |
+|----|-------------------------------------------------------------------------------|------------|---------|-------------------|-------------|
+|T1  |	Verify controller can use textbook repository file                            |     Yes    | Tested  | passed (10/12/20) |Inspection   |
+|T2  |	Inspect list of textbooks displayed                                           |     Yes    | Tested  | passed (10/12/20) |Unit Test    |
+|T3  |	Check that each product page is displayed                                     |     Yes    | Tested  | passed (10/15/20) | Unit Test   |
+|T4  |	Verify category boxes are selectable                                          |     Yes    | Tested  | passed (10/15/20) |Inspection   |
+|T5  |	Verify list of textbooks are filterd by the category selected                 |     Yes    | Tested  | passed (10/17/20) |Inspection   |
+|T6  |	Check the filtered result shows the precribed number of results (5)           |     Yes    | Tested  | passed (10/20/20) |Inspection   |
+|T7  |	Check that the Cart can add/load new items (textbooks)                        |     Yes    | Tested  | passed (10/20/20) | Unit Test   |
+|T8  |	Verify the Cart sums the quantity of items in it                              |     Yes    | Tested  | passed (10/23/20) |Inspection   |
+|T9  |	Verify items can be removed from Cart and Cart can be cleared                 |     Yes    | Tested  | failing           |Inspection   |
+|T10 |	Verify that system does not allow Checkout with empty Cart                    |     Yes    | Tested  | passed (10/24/20) |   Demo      |
+|T11 |	Check valid shipping details for checkout and verify it Checks out an order   |     Yes    | Tested  | passed (10/27/20) | Tes/Demo    |
+|T12 |	Check the order is saved to the database in the Orders table                  |     Yes    | Tested  | passed (10/28/20) |Inspection   |
+|T13 | Verify the intro page is displayed first                                      |     No     | Tested  | failing           |   Demo      |
 
 
 ## Functional Requirements: The application must…
