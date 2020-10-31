@@ -117,20 +117,21 @@
 ***
 
 
-| ID |  Test Table                                                                    |Status     |
-|----|--------------------------------------------------------------------------------|-----------|
-|T1  |	Verify search mechanism is active. Blinking cursor                            |Not Tested |
-|T2  |	Check the search box. Enter text                                              |Not Tested |
-|T3  |	Check filter boxes are selectable                                             |Not Tested |
-|T4  |	Verify category box is selectable                                             |Not Tested |
-|T5  |	Verify search result populate on display area                                 |Not Tested |
-|T6  |	Check item results are selectable                                             |Not Tested |
-|T7  |	Check that a second window pops up                                            |Not Tested |
-|T8  |	Verify hyperlinks and description items are valid                             |Not Tested |
-|T9  |	Verify hyperlink redirects to retailer site                                   |Not Tested |
-|T10 |	Verify retailers are showing up on the map                                    |Not Tested |
-|T11 |	Verify that each item selected populates on the map                           |Not Tested |
-|T12 |	Check the retialer's business information is accurate                         |Not Tested |
+| ID |  Test Table                                                                   |Initial | Status  |
+|----|-------------------------------------------------------------------------------|--------|---------|
+|T1  |	Verify controller can use textbook repository file                            | Tested | passed  |
+|T2  |	Inspect list of textbooks displayed                                           | Tested | passed  |
+|T3  |	Check that each product page is displayed                                     | Tested | passed  |
+|T4  |	Verify category boxes are selectable                                          | Tested | passed  |
+|T5  |	Verify list of textbooks are filterd by the category selected                 | Tested | passed  |
+|T6  |	Check the filtered result shows the precribed number of results (5)           | Tested | passed  |
+|T7  |	Check that the Cart can add/load new items (textbooks)                        | Tested | passed  |
+|T8  |	Verify the Cart sums the quantity of items in it                              | Tested | passed  |
+|T9  |	Verify items can be removed from Cart and Cart can be cleared                 | Tested | failing |
+|T10 |	Verify that system does not allow Checkout with empty Cart                    | Tested | passed  |
+|T11 |	Check valid shipping details for checkout and verify it Checks out an order   | Tested | passed  |
+|T12 |	Check the order is saved to the database in the Orders table                  | Tested | passed  |
+|T13 | Verify the intro page is displayed first                                      | Tested | failing |
 
 
 ## Functional Requirements: The application must…
