@@ -1,7 +1,7 @@
 # TextbookFinderV2
  
 ## Concept
-## This project consist of a Web Application design to be hosted on a server and makes use of an existing API to pull descriptive data about textbooks. It includes an ERD diagram, class diagram, several wire-frame sketches that illustrate the basic concept and useability of the application. In the simplest form, the application will retrieve a list of textbooks to be displayed to the user with descriptive information and direct link to the publisher/retailer. 
+## This project consist of an E-commerce Web Application design to be hosted on a server and makes use of simple database designed to hold descriptive data about textbooks. It includes an ERD diagram, class diagram, several wire-frame sketches that illustrate the basic concept and useability of the application. In the simplest form, the application will retrieve a list of textbooks to be displayed to the user with descriptive information and direct link to the publisher/retailer. 
 
 *** 
 # <a name="tcontent"></a>
