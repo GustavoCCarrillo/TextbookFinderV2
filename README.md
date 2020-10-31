@@ -128,11 +128,22 @@
 |T6  |	Check the filtered result shows the precribed number of results (5)           |     Yes    | Tested  | passed (10/20/20) |Inspection   |
 |T7  |	Check that the Cart can add/load new items (textbooks)                        |     Yes    | Tested  | passed (10/20/20) | Unit Test   |
 |T8  |	Verify the Cart sums the quantity of items in it                              |     Yes    | Tested  | passed (10/23/20) |Inspection   |
-|T9  |	Verify items can be removed from Cart and Cart can be cleared                 |     Yes    | Tested  | failing           |Inspection   |
+|T9  |	Verify items can be removed from Cart and Cart can be cleared                 |     Yes    | retest  | failing           |Inspection   |
 |T10 |	Verify that system does not allow Checkout with empty Cart                    |     Yes    | Tested  | passed (10/24/20) |   Demo      |
 |T11 |	Check valid shipping details for checkout and verify it Checks out an order   |     Yes    | Tested  | passed (10/27/20) | Tes/Demo    |
-|T12 |	Check the order is saved to the database in the Orders table                  |     Yes    | Tested  | passed (10/28/20) |Inspection   |
+|T12 |	Check the order is saved to the database in the Orders table                  |     No     | Not Yet | failing           |Inspection   |
 |T13 | Verify the intro page is displayed first                                      |     No     | Tested  | failing           |   Demo      |
+
+
+
+***
+
+| ?  |  Test Readiness Review                                                        |     %         |Test IDs                    |
+|----|-------------------------------------------------------------------------------|---------------|----------------------------|
+| 1  |	What percent of requirements are (currently) covered by test cases?           |   80%         |T1 - T11                    |
+| 2  |	What percent of test cases are currently passing?                             |   84.6%       |T1-T8, T10, T11             |
+| 3  |	What level of Validation could be expected after Verification?                |System Testing |evaluate system’s compliance|
+
 
 
 ## Functional Requirements: The application must…
