@@ -15,6 +15,7 @@
 - [User Stories](#userstory)
 - [Use Cases](#usecase)
 - [Requirements](#reqlist)
+- [Requirement Traceability Matrix](#RTM)
 - [Prototype](Prototype/README.prototype.md)
 
 
@@ -117,7 +118,9 @@
 
 ***
 
-
+<a name="RTM"></a>
+## RTM <h2>
+[table of content](#tcontent)
 | ID |  Test Table                                                                   |Implemented?| Initial |      Status       | Test Method |
 |----|-------------------------------------------------------------------------------|------------|---------|-------------------|-------------|
 |T1  |	Verify controller can use textbook repository file                            |     Yes    | Tested  | passed (10/12/20) |Inspection   |
