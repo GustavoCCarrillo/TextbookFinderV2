@@ -121,7 +121,7 @@
 <a name="RTM"></a>
 ## RTM <h2>
 [table of content](#tcontent)
-| ID |  Test Table                                                                   |Implemented?| Initial |      Status       | Test Method |
+| ID |  Requirement Traceability Matrix  - Project: TextbookFinder                   |Implemented?| Initial |      Status       | Test Method |
 |----|-------------------------------------------------------------------------------|------------|---------|-------------------|-------------|
 |T1  |	Verify controller can use textbook repository file                            |     Yes    | Tested  | passed (10/12/20) |Inspection   |
 |T2  |	Inspect list of textbooks displayed                                           |     Yes    | Tested  | passed (10/12/20) |Unit Test    |
